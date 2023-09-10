@@ -4,6 +4,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../../assets/logo.png';
 import pages from '../utils/pages';
+import './Layout.css';
 
 const navLinks = Array.from(pages.values()).filter(page => page.anchorable);
 
