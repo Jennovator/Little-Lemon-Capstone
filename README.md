@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+# Website Description:
+Welcome to Little Lemon, a delightful family-owned Mediterranean restaurant that harmoniously blends the rich heritage of traditional recipes with a refreshing modern twist. Our website is your gateway to a culinary journey that celebrates the flavors and traditions of the Mediterranean.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies Used:
+React: We've harnessed the power of React, a cutting-edge JavaScript library, to create a seamless and interactive user experience on our website. This technology allows us to provide you with a smooth and engaging interface, making your visit enjoyable from start to finish.
 
-## Available Scripts
+## Services Offered:
+### 1. Online Ordering 
+Satisfy your Mediterranean cravings from the comfort of your home. Our website offers a hassle-free online ordering system, allowing you to explore our diverse menu, customize your meals, and have your favorite dishes delivered right to your doorstep. Whether it's a cozy night in or a gathering with loved ones, we bring the Mediterranean flavors to you.
 
-In the project directory, you can run:
+### 2. Table Booking 
+Planning a special dining experience? Reserve your table effortlessly through our website. Whether it's a romantic dinner for two or a gathering of friends and family, we ensure that your dining experience at Little Lemon is as enjoyable and memorable as can be. Simply choose your preferred date and time, and we'll be ready to welcome you.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+At Little Lemon, we take immense pride in sharing the authentic tastes of the Mediterranean with you. Our website not only showcases our delectable menu but also offers a glimpse into our commitment to quality, authenticity, and warm hospitality. Join us on this culinary journey, where tradition meets innovation, and savor the vibrant flavors of the Mediterranean at Little Lemon.
