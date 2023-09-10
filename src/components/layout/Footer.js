@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import pages from '../utils/pages';
 import React from 'react';
 import logoLight from '../../assets/logoLight.png';
+import './Layout.css';
 
 const contacts = [
     { icon: faLocationDot, info: '678 Pisa Ave, Chicago, IL 60611', },
