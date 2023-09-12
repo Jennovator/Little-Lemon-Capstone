@@ -22,3 +22,38 @@ body {
 .grid {
   display: grid;
 }
+
+main > section {
+  margin-bottom: 5rem;
+}
+
+header {
+  border-bottom: 1rem solid #495E57;
+}
+
+a {
+  text-decoration: none;
+  color: #495E57;
+}
+
+h1, h2 {
+  line-height: 1;
+  font-family: "Markazi Text";
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+form {
+  max-width: 28.125rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
