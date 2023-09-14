@@ -26,15 +26,15 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
         e.preventDefault();
         submitData({ name, email, date, time, guests, occasion, });
         emailjs.sendForm('service_hih186i', 'template_c00it34', form.current, '9HgczSqOISTnc0Vix')
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
     return (
-        <form ref={form} onSubmit={handleFormSubmit}>
+        <form ref={form} onSubmit={handleFormSubmit} data-testid="reservation-form">
             <label htmlFor="user_name">Full Name</label>
             <input type="text" id="user_name" name="user_name" value={name} onChange={e => setName(e.target.value)} required />
             <label htmlFor="user_email">Email</label>
@@ -42,7 +42,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
             <label htmlFor="res_date">Choose date</label>
             <input type="date" id="res_date" name="res_date" value={date} onChange={handleDateChange} required />
             <label htmlFor="res_time">Choose time</label>
-            <select id="res_time " name="res_time" value={time} onChange={handleTimeChange} required>
+            <select id="res_time" name="res_time" value={time} onChange={handleTimeChange} required>
                 {availableTimes.map((availableTime) => (
                     <option key={availableTime} value={availableTime}>
                         {availableTime}
@@ -61,7 +61,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
             </select>
             <label htmlFor="instruction">Additional Instructions</label>
             <textarea id="instruction" name="instruction" cols="30" rows="10" value={instruction} onChange={e => setInstruction(e.target.value)} />
-            <button className="button-primary"  type="submit">Make your Reservation</button>
+            <button className="button-primary" type="submit">Make your Reservation</button>
         </form>
     );
 };
