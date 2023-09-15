@@ -22,9 +22,27 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
 
     const handleTimeChange = e => setTime(e.target.value);
 
+    const isNameValid = () => name !== '';
+    const isEmailValid = () => email !== '';
+    const isDateValid = () => date !== '';
+    const isTimeValid = () => time !== '';
+    const isGuestsValid = () => guests >= 1 ;
+    const isOccasionValid = () => occasion !== '';
+
+    const areAllFieldsValid = () => {
+        return(
+            isNameValid() &&
+            isEmailValid() &&
+            isDateValid() &&
+            isTimeValid() &&
+            isGuestsValid() &&
+            isOccasionValid()
+        );
+    }
+
     const handleFormSubmit = e => {
         e.preventDefault();
-        submitData({ name, email, date, time, guests, occasion, });
+        submitData({ name, email, date, time, guests, occasion, instruction });
         emailjs.sendForm('service_hih186i', 'template_c00it34', form.current, '9HgczSqOISTnc0Vix')
             .then((result) => {
                 console.log(result.text);
@@ -61,7 +79,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
             </select>
             <label htmlFor="instruction">Additional Instructions</label>
             <textarea id="instruction" name="instruction" cols="30" rows="10" value={instruction} onChange={e => setInstruction(e.target.value)} />
-            <button className="button-primary" type="submit">Make your Reservation</button>
+            <button className="button-primary" type="submit" disabled={!areAllFieldsValid()}>Make your Reservation</button>
         </form>
     );
 };
