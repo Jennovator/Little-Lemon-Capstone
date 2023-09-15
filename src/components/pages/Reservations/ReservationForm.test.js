@@ -4,14 +4,38 @@ import ReservationForm from './ReservationForm';
 describe('Reservation form', () => {
   const availableTimes = ['17:00', '17:30'];
   const today = new Date().toISOString().split('T')[0];
-  const dispatchOnDateChange = jest.fn();
   const submitData = jest.fn();
+
+  test('renders ReservationForm component', () => {
+    const availableTimes = ['10:00 AM', '12:00 PM', '2:00 PM'];
+    const dispatchOnDateChange = jest.fn();
+    const submitData = jest.fn();
+
+    render(
+      <ReservationForm
+        availableTimes={availableTimes}
+        dispatchOnDateChange={dispatchOnDateChange}
+        submitData={submitData}
+      />
+    );
+
+    // Test if the name input is rendered
+    expect(screen.getByLabelText('Full Name')).toBeInTheDocument();
+
+    // Test if the date input is rendered with the initial value
+    expect(screen.getByLabelText('Choose date')).toHaveValue('2023-09-15');
+
+    // Simulate a form submission and test if the submitData function is called
+    fireEvent.click(screen.getByText('Make your Reservation'));
+    expect(submitData).toHaveBeenCalled();
+
+  });
 
   test('should correctly render all fields and their default values', async () => {
     render(
       <ReservationForm availableTimes={availableTimes} submitData={submitData} />
     );
-    
+
     const fullName = screen.getByLabelText(/Full Name/);
     const userEmail = screen.getByLabelText(/Email/);
     const dateInput = screen.getByLabelText(/Choose date/);
@@ -55,13 +79,13 @@ describe('Reservation form', () => {
     const submitButton = screen.getByRole('button');
     fireEvent.click(submitButton);
 
-    expect(submitData).toHaveBeenCalledWith({ 
+    expect(submitData).toHaveBeenCalledWith({
       name: '',
       email: '',
-      date: today, 
-      time: availableTimes[0], 
-      guests: 1, 
-      occasion: 'Birthday', 
+      date: today,
+      time: availableTimes[0],
+      guests: 1,
+      occasion: 'Birthday',
     });
   });
 

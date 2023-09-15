@@ -44,7 +44,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
             <label htmlFor="res_time">Choose time</label>
             <select id="res_time" name="res_time" value={time} onChange={handleTimeChange} required>
                 {availableTimes.map((availableTime) => (
-                    <option key={availableTime} value={availableTime}>
+                    <option key={availableTime} value={availableTime} data-testid="booking-time-options">
                         {availableTime}
                     </option>
                 ))}
