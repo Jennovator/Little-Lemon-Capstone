@@ -26,7 +26,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
     const isEmailValid = () => email !== '';
     const isDateValid = () => date !== '';
     const isTimeValid = () => time !== '';
-    const isGuestsValid = () => guests >= 1 ;
+    const isGuestsValid = () => guests !== '';
     const isOccasionValid = () => occasion !== '';
 
     const areAllFieldsValid = () => {
@@ -42,7 +42,7 @@ const ReservationForm = ({ availableTimes, dispatchOnDateChange, submitData }) =
 
     const handleFormSubmit = e => {
         e.preventDefault();
-        submitData({ name, email, date, time, guests, occasion, instruction });
+        submitData({ name, email, date, time, guests, occasion, instruction});
         emailjs.sendForm('service_hih186i', 'template_c00it34', form.current, '9HgczSqOISTnc0Vix')
             .then((result) => {
                 console.log(result.text);
