@@ -1,6 +1,8 @@
 {
   "name": "little-lemon",
   "version": "0.1.0",
+  "description": "A website that allows the customer to view and order at Little Lemon",
+  "author": "Jenyll Mabborang",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
